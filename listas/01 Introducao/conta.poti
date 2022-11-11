@@ -1,0 +1,25 @@
+tipo Conta
+  nome: Texto
+  numero: Texto
+  var _saldo := 0.0
+
+  deposito(valor: Real): Lógico
+    se valor >= 0 então _saldo := _saldo + valor fim
+    retorne valor >= 0
+  fim
+
+  saque(valor: Real): Lógico
+    se valor >= 0 então _saldo := _saldo - valor fim
+    retorne valor >= 0
+  fim
+
+  saldo() = _saldo
+fim
+
+conta = Conta("James", "007")
+escreva conta.saldo
+conta.deposito(100.0)
+escreva conta.saldo
+conta.saque(50.0)
+escreva conta.saldo
+escreva conta

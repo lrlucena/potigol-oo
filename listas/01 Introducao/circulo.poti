@@ -1,0 +1,10 @@
+tipo Circulo
+  raio: Real
+  area() = raio * PI ^ 2
+  circunferencia() = 2 * PI * raio
+fim
+
+circulo1 = Circulo(10)
+escreva circulo1.raio formato "%.2f"
+escreva circulo1.area formato "%.2f"
+escreva circulo1.circunferencia formato "%.2f"

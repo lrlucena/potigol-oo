@@ -1,0 +1,26 @@
+# Classe imutável
+tipo Conta2
+  nome: Texto
+  numero: Texto
+  saldo: Real
+
+  deposito(valor: Real) =
+    se valor >= 0 então
+      Conta2(nome, numero, saldo + valor)
+    senão
+      isto
+    fim
+
+  saque(valor: Real) =
+    se valor >= 0 então
+      Conta2(nome, numero, saldo - valor)
+    senão
+      isto
+    fim
+fim
+
+conta2 = Conta2("James", "007", 0.0)
+escreva conta2.saldo
+c3 = conta2.deposito(100).saque(50)
+escreva c3.saldo
+escreva c3.deposito(-200).saldo

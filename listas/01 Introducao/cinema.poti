@@ -1,0 +1,31 @@
+tipo Cinema
+  dia: Inteiro
+  hora: Real
+
+  acrescimo() = se hora >= 17 entao 1.5 senão 1.0 fim
+
+  meia() = escolha dia
+    caso 2 => 8 * acrescimo
+    caso 3 => 8 * acrescimo
+    caso 4 => 8
+    caso 5 => 8 * acrescimo
+    caso _ => 20 * acrescimo
+  fim
+
+  inteira() = escolha dia
+    caso 4 => meia
+    caso _ => meia * 2
+  fim
+
+fim
+
+entrada1 = Cinema(5, 12.0)
+entrada2 = Cinema(4, 20.0)
+entrada3 = Cinema(1, 20.0)
+
+escreva entrada1.meia
+escreva entrada1.inteira
+escreva entrada2.meia
+escreva entrada2.inteira
+escreva entrada3.meia
+escreva entrada3.inteira

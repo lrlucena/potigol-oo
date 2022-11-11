@@ -1,0 +1,19 @@
+tipo Disciplina
+  nome: Texto
+  var n1, n2, n3, n4, pf := 0
+  media_parcial() = (2 * (n1 + n2) + 3 * (n3 + n4)) div 10
+  media_final() =
+    se media_parcial > 60 ou pf < media_parcial entao
+      media_parcial
+    senao
+      (media_parcial + pf) div 2
+    fim
+fim
+
+disc = Disciplina("Programação Orientada a Objetos")
+disc.n1 := 100
+disc.n2 := 90
+disc.n3 := 80
+disc.n4 := 80
+escreva "Média parcial: {disc.media_parcial}"
+escreva "Média final: {disc.media_final}"

@@ -1,0 +1,9 @@
+tipo Viagem
+  distancia: Real
+  tempo: Real
+
+  velocidade_media() = distancia / tempo
+fim
+
+viagem = Viagem(100, 4)
+escreva viagem.velocidade_media
